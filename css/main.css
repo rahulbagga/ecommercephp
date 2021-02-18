@@ -129,6 +129,10 @@ div#productviewinfo {
 div#productviewdesc p {
   text-align: justify;
 }
+div#productviewdesc form {
+  margin-left: 0px;
+  margin-top: 10px;
+}
 
 /* Products Page */
 
@@ -138,12 +142,16 @@ div#productscontainer {
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
+  /*
   border: black 3px solid;
+  */
 }
 
 div.productsrow {
   display: flex;
+  /*
   border: aqua 3px solid;
+  */
   width: 90%;
   margin: 20px auto 20px auto;
 }
@@ -152,19 +160,30 @@ div.productsblock {
   width: 20%;
   height: 350px;
   margin: 10px auto 10px auto;
-  border: rgb(12, 12, 12) 3px solid;
+  border: rgb(97, 92, 92) 1px solid;
+  border-radius: 20px;
 }
 div.productsimgbox {
   display: block;
   width: 90%;
-  height: 75%;
-  margin: 5px auto 5px auto;
-  border: green 2px solid;
+  height: 70%;
+  margin: 25px auto 0px auto;
+  border-bottom: rgb(214, 228, 214) 1px solid;
 }
 div.productsimgbox img {
   display: block;
   width: 80%;
   max-width: 200px;
   max-height: 90%;
-  margin: 2px auto 2px auto;
+  margin: 2px auto 0px auto;
+}
+div.productsdata {
+  margin-top: 2px;
+  margin-left: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+p.productsprice {
+  margin-bottom: 1px;
+  text-align: center;
 }

@@ -39,7 +39,26 @@
                     <h3>Product Title</h3>
                 </div>
                 <div id="productviewdesc">
-                    <h6>Product description</h6>
+                    <h6>Product description</h6>  
+                    <label>Quantity: </label>
+                    <select form="productviewqform" name="quantity" id="productviewqselect">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label>Size: </label>
+                    <select form="productviewqform" name="size" id="productviewsselect">
+                        <option value="x">S</option>
+                        <option value="m">M</option>
+                        <option value="l">L</option>
+                        <option value="xl">XL</option>
+                        <option value="xxl">XXL</option>
+                    </select>
+                    <form id="productviewqform">
+                        <input type="submit" value="Add to Cart">
+                    </form>
                     <br>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis urna eu ligula consectetur porttitor. Curabitur id ultrices est. Phasellus at orci finibus, gravida eros non, bibendum diam. 
                         Duis ultrices, sapien vitae consequat ultricies, sem turpis elementum est, sit amet finibus risus mauris in odio. Morbi quis euismod nulla, ac luctus sem. Donec vulputate egestas maximus.<br>
