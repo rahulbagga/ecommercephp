@@ -166,8 +166,8 @@ div.productsblock {
 div.productsimgbox {
   display: block;
   width: 90%;
-  height: 70%;
-  margin: 25px auto 0px auto;
+  height: 60%;
+  margin: 25px auto 10px auto;
   border-bottom: rgb(214, 228, 214) 1px solid;
 }
 div.productsimgbox img {
@@ -175,10 +175,11 @@ div.productsimgbox img {
   width: 80%;
   max-width: 200px;
   max-height: 90%;
-  margin: 2px auto 0px auto;
+  margin: 12px auto 0px auto;
+  overflow: hidden;
 }
 div.productsdata {
-  margin-top: 2px;
+  margin-top: 5px;
   margin-left: 10px;
   text-align: left;
   font-size: 14px;
@@ -186,4 +187,38 @@ div.productsdata {
 p.productsprice {
   margin-bottom: 1px;
   text-align: center;
+  margin-left: 0;
+  margin-right: 2px;
+}
+
+/*checkout page*/
+div#checkoutcontainer {
+  display: flex;
+  border: red 2px solid;
+  width: 95%;
+  margin: 10px auto 10px auto;
+}
+div.checkoutproductsbox {
+  display: flex;
+  width: 90%;
+  border: blue 2px solid;
+  max-height: 150px;
+  padding: 5px 20px 5px 20px;
+  margin: 20px;
+  float: left;
+  clear: right;
+}
+div.checkoutproductsbox img {
+  max-height: 100px;
+  margin-right: 20px;
+}
+div#checkoutfinalbox {
+  display: block;
+  width: 30%;
+  margin: 20px auto 20px auto;
+  padding-top: 20px;
+  text-align: center;
+  border: pink 2px solid;
+  clear: left;
+  float: right;
 }
