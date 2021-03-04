@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+  width: 100%;
+}
 body {
   display: block;
   width: 100%;
@@ -201,12 +205,21 @@ div#checkoutcontainer {
 div.checkoutproductsbox {
   display: flex;
   width: 90%;
-  border: blue 2px solid;
+
   max-height: 150px;
   padding: 5px 20px 5px 20px;
   margin: 20px;
   float: left;
   clear: right;
+}
+div#checkform {
+  border: black 2px solid;
+  width: 80%;
+  margin: 10px auto 10px auto;
+}
+h4#ordernow {
+  margin-top: 10px;
+  text-align: center;
 }
 div.checkoutproductsbox img {
   max-height: 100px;
@@ -221,4 +234,33 @@ div#checkoutfinalbox {
   border: pink 2px solid;
   clear: left;
   float: right;
+}
+
+/* ACCOUNT PAGE*/
+
+body#accountbody {
+  display: block;
+  height: 100%;
+  width: 100%;
+  /*
+  width: 100vw;
+  background-image: url("../img/accountback.jpg");
+  background-position: right;
+  background-size: cover;
+  background-repeat: no-repeat;
+  */
+}
+div#accountcontainer,
+div#leftsignin,
+div#rightsignup {
+  display: flex;
+  width: 100%;
+  padding: 30px;
+}
+div#leftsignin,
+div#rightsignup {
+  box-sizing: border-box;
+  border: black 1px solid;
+  margin: 20px;
+  border-radius: 30px;
 }

@@ -12,16 +12,14 @@
     <header>
         <nav>
             <div id="logoheader">
-                <a href="index.html"><img id="imglogo" src="img/logo.png"></a>
+                <a href="index.php"><img id="imglogo" src="img/logo.png"></a>
             </div>
 
             <ul>
-            
                 <li>CATEGORIES</li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li>ACCOUNT</li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="checkout.html">CHECKOUT</a></li>
+                <li><a href="products.php">PRODUCTS</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="checkout.php">CHECKOUT</a></li>
             </ul>
         </nav>
     </header>

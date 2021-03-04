@@ -15,16 +15,13 @@
     <header>
         <nav>
             <div id="logoheader">
-                <a href="index.html"><img id="imglogo" src="img/logo.png"></a>
+                <a href="index.php"><img id="imglogo" src="img/logo.png"></a>
             </div>
-
             <ul>
-            
                 <li>CATEGORIES</li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li>ACCOUNT</li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="checkout.html">CHECKOUT</a></li>
+                <li><a href="products.php">PRODUCTS</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="checkout.php">CHECKOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -32,11 +29,11 @@
        <!--- <img src ="img/back.png"> -->
        <div id="productviewblock">
             <div id="productviewimg">
-                <img src="img/products/shoes.jpg">
+                <img src="<?php echo $_GET['img']?>">
             </div>
             <div id="productviewinfo">
                 <div id="productviewtitle">
-                    <h3>Product Title</h3>
+                    <h3>Product Title: <br> <?php echo $_GET['name']?></h3>
                 </div>
                 <div id="productviewdesc">
                     <h6>Product description</h6>  
@@ -56,13 +53,18 @@
                         <option value="xl">XL</option>
                         <option value="xxl">XXL</option>
                     </select>
-                    <form action="checkout.html" method="post" id="productviewqform">
-                        <input type="submit" value="Add to Cart">
+                    
+                    <form action="" method="post" id="productviewqform">
+                        <input name="sid" value="<?php echo $_GET['id']; ?>" id="productviewqform" hidden>
+                        <input name="pname" value="<?php echo $_GET['name']; ?>" id="productviewqform" hidden>
+                        <input name="price" value="<?php echo $_GET['sellingprice']; ?>" id="productviewqform" hidden>
+                        <input name="img" value="<?php echo $_GET['img']; ?>" id="productviewqform" hidden>
+                        <input type="submit" value="Add to Cart" name="cart">
                     </form>
                     <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis urna eu ligula consectetur porttitor. Curabitur id ultrices est. Phasellus at orci finibus, gravida eros non, bibendum diam. 
-                        Duis ultrices, sapien vitae consequat ultricies, sem turpis elementum est, sit amet finibus risus mauris in odio. Morbi quis euismod nulla, ac luctus sem. Donec vulputate egestas maximus.<br>
-                        Proin semper felis sit amet libero dictum, nec ornare massa efficitur. Sed gravida urna in commodo pretium. Donec molestie volutpat sem non pharetra. Fusce imperdiet hendrerit metus, nec molestie lectus. Vestibulum id vulputate tortor. Integer pulvinar tincidunt augue, quis consectetur velit ultrices in. Nunc mattis eros sed feugiat aliquam. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    <p>MRP= <?php echo $_GET['mrp'] ?> <br> Selling Price= <?php echo $_GET['sellingprice'] ?></p>
+                    <br>
+                        <p> <?php echo $_GET['desc']; ?>
                     </p>
                 </div>
             </div>
@@ -78,3 +80,15 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+<?php 
+
+session_start();
+
+        $_SESSION['sid']=$_GET['id'];
+        $_SESSION['spname']=$_POST['pname'];
+        $_SESSION['sprice'] =$_POST['price'];
+        $_SESSION['simg']=$_POST['img'];
+        $_SESSION['size']=$_POST['size'];
+        $_SESSION['quantity']=$_POST['quantity'];
+    
+?>

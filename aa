@@ -19,12 +19,11 @@
             </div>
 
             <ul>
-            
                 <li>CATEGORIES</li>
-                <li><a href="products.html">PRODUCTS</a></li>
-                <li>ACCOUNT</li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="checkout.html">CHECKOUT</a></li>
+                <li><a href="productsphp">PRODUCTS</a></li>
+                <li><a href="account.php">MY ACCOUNT</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
+                <li><a href="checkout.php">CHECKOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -34,7 +33,7 @@
             <div class="productsrow">
                 <div class="productsblock">
                     <div class="productsimgbox">
-                        <a href="/productview.html"><img src="img/products/products1.jpg"></a>
+                        <a href="productview.html"><img src="img/products/products1.jpg"></a>
                     </div>
                     <div class="productsdata">
                         <p>Casual Half Sleeve Solid Women Black Top</p>
@@ -210,3 +209,36 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+<?php
+
+require('connection.php');
+
+$getpquery = "SELECT * from products";
+
+$getpqueryrun = mysqli_query($con, $getpquery);
+
+$productrows = mysqli_num_rows($getpqueryrun);
+
+if($productrows>0){
+   while($row=mysqli_fetch_array($getpqueryrun)){
+       echo  "<div class='productsblock'> <div class='productsimgbox'>";
+       echo "<a href ='".$row['productview.html']."'><img src='".$row['product_image']."'></a>";
+       echo "</div>";
+       echo "<div class='productsdata'>";
+       echo "<p>".$row['product_name']."</p>";
+       echo "<p>".$row['product_sp']."</p>";
+       echo "</div>
+            </div>";
+            
+            
+
+
+
+      
+          
+
+   }
+}
+
+?>
